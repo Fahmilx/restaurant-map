@@ -18,6 +18,9 @@ db = client[DB_NAME]
 
 app = Flask(__name__)
 
+@app.route("/")
+def main():
+    return render_template("index.html")
 
 @app.route("/map")
 def map_example():
